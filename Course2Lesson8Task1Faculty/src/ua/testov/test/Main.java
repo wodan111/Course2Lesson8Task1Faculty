@@ -22,7 +22,7 @@ public class Main {
 		facult.addGroup(1, gr1);
 		System.out.println(facult);
 
-		try (ObjectOutputStream ou = new ObjectOutputStream(new FileOutputStream("test.doc"))) {
+		try (ObjectOutputStream ou = new ObjectOutputStream(new FileOutputStream("test.doc",true))) {
 			ou.writeObject(facult);
 		} catch (IOException e) {
 			System.out.println("ERROR save faculty");
